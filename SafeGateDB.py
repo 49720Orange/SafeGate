@@ -24,7 +24,7 @@ class safegateDB():
             q='INSERT INTO hocaBilgileri(id, ad, soyad,okuladi,email) ' \
               'VALUES(1, "Neslihan","Genç","Dilek Sabancı MTAL","neslihan.karacakurt@gmail.com"),' \
               '(2, "Emine","Aydoğmuş","Dilek Sabancı MTAL","orangeemi@gmail.com"),' \
-              '(3, "İsmail Ersin","Turan","Dr. Nurettin Erk Perihan Erk MTAL","ismailersin@gmail.com")'
+              '(3, "İsmail Ersin","Turan","Dr. Nurettin Erk Perihan Erk MTAL","iet1981@yahoo.com")'
             self.set_query(q)
 
     def kontrol(self):
@@ -41,6 +41,7 @@ class safegateDB():
         return True
     def get_hocalar(self):
         return self.get_query("select ad, soyad,okuladi,email from hocaBilgileri;")
+
 
 
 
