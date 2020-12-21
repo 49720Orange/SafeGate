@@ -1,0 +1,199 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>SafeGate-Python ile Şifreleme ve Etik Hackleme</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link rel="shortcut icon" type="image/x-icon" href="static/img/favicon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+		<!-- ========================= CSS here ========================= -->
+		<link rel="stylesheet" href="static/css/bootstrap-5.0.0-alpha.min.css">
+        <link rel="stylesheet" href="static/css/LineIcons.2.0.css">
+		<link rel="stylesheet" href="static/css/animate.css">
+		<link rel="stylesheet" href="static/css/main.css">
+    </head>
+    <body>
+        <!-- ========================= preloader start ========================= -->
+            <div class="preloader">
+                <div class="loader">
+                    <div class="ytp-spinner">
+                        <div class="ytp-spinner-container">
+                            <div class="ytp-spinner-rotator">
+                                <div class="ytp-spinner-left">
+                                    <div class="ytp-spinner-circle"></div>
+                                </div>
+                                <div class="ytp-spinner-right">
+                                    <div class="ytp-spinner-circle"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <!-- preloader end -->
+
+        <!-- ========================= header start ========================= -->
+        <header class="header navbar-area bg-white">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-12">
+                        <nav class="navbar navbar-expand-lg">
+                            <a class="navbar-brand" href={{ "/" }}>
+                                <img src="static/img/logo/logo.png" alt="Logo">
+                            </a>
+                            <button class="navbar-toggler" type="button" data-toggle="collapse"
+                                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="toggler-icon"></span>
+                                <span class="toggler-icon"></span>
+                                <span class="toggler-icon"></span>
+                            </button>
+
+                            <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
+                                <ul id="nav" class="navbar-nav ml-auto">
+                                    <li class="nav-item text-left">
+                                        <a href={{ "/" }}>Anasayfa</a>
+                                    </li>
+
+                                </ul>
+
+                            </div> <!-- navbar collapse -->
+                        </nav> <!-- navbar -->
+                    </div>
+                </div> <!-- row -->
+            </div> <!-- container -->
+        
+        </header>
+        <!-- ========================= header end ========================= -->
+
+        
+       
+        <section class="subscribe-section pt-70 pb-70 img-bg" style="background-image: url('static/img/bg/common-bg.svg')">
+            <div class="container">
+                <div class="row align-items-center">
+
+                </div>
+            </div>
+        </section>
+        <!-- ========================= feature-section start ========================= -->
+        <section id="sifrelemesonuc" class="feature-section pt-100">
+            <div class="container card">
+                <div class="row card-title">
+                    <div class="col-xl-6 col-lg-7 col-md-9 mx-auto">
+                        <div class="section-title text-center mb-55">
+                            <h2 class="wow fadeInUp" data-wow-delay=".4s">Şifreleme Sonucunuz</h2>
+                            <p class="wow fadeInUp" data-wow-delay=".6s">Şifrelenmiş mesajınız ve eğer kullanıldıysa
+                                şifreleme anahtarınız yazdığınız eposta adresine gönderilmiştir.</p>
+                        </div>
+                    </div>
+                </div>
+                 <div class="row card-body">
+                     <div class="col mx-auto">
+                        {{ hata }} <br>
+                        <p><strong>Sayın:  </strong> {{ isim }}</p>
+                        <p><strong>Mesajınız:</strong> {{ mesaj }}</p>
+                        <p><strong>{{metod}} ile şifrelenmiş Şifreli Mesajınız: </strong> {{ sonuc }}</p>
+                         <br>
+                     </div>
+                 </div>
+            </div>
+        </section>
+        <br><br>
+        <section class="subscribe-section pt-70 pb-70 img-bg" style="background-image: url('static/img/bg/common-bg.svg')">
+            <div class="container">
+                <div class="row align-items-center">
+
+                </div>
+            </div>
+        </section>
+        <!-- ========================= footer start ========================= -->
+        <footer class="footer pt-100">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-3 col-lg-4 col-md-6">
+                        <div class="footer-widget mb-60 wow fadeInLeft" data-wow-delay=".2s">
+                            <a class="logo mb-30" href={{ "/" }} ><img src="static/img/logo/logo.png" alt="logo"></a>
+                            <p class="mb-30 footer-desc">Grup Orange olarak Python diliyle Flask tabanlı bu web uygulamasını geliştirdik. </p>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 offset-xl-2 col-lg-3 col-md-6">
+                        <div class="footer-widget mb-60 wow fadeInUp" data-wow-delay=".4s">
+                            <h4>Hızlı Link</h4>
+                            <ul class="footer-links">
+                                <li>
+                                    <a href={{ "/" }}>Anasayfa</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)">Hakkımızda</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)">Şifreleme ve Deşifreleme</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)">Etik Hackleme Araçları</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)">İetişim</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-4 col-lg-4 col-md-6">
+                        <div class="footer-widget mb-60 wow fadeInRight" data-wow-delay=".8s">
+                            <h4>Contact</h4>
+                            <ul class="footer-contact">
+                                <li>
+                                    <p>MEB Python Eğitici Eğitimi Projesi</p>
+                                </li>
+                                <li>
+                                    <p>orange49720@gmail.com</p>
+                                </li>
+                                <li>
+                                    <p>İstanbul, Türkiye</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="copyright-area">
+                    <div class="row align-items-center">
+                        <div class="col-md-6">
+                             <div class="footer-social-links">
+                                <ul class="d-flex">
+                                    <li><a href="javascript:void(0)"><i class="lni lni-facebook-original"></i></a></li>
+                                    <li><a href="javascript:void(0)"><i class="lni lni-twitter-original"></i></a></li>
+                                    <li><a href="javascript:void(0)"><i class="lni lni-linkedin-original"></i></a></li>
+                                    <li><a href="javascript:void(0)"><i class="lni lni-instagram-original"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <p class="wow fadeInUp" data-wow-delay=".3s">&copy; 2020-2021 by Orange</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- ========================= footer end ========================= -->
+
+
+        <!-- ========================= scroll-top ========================= -->
+        <a href="#" class="scroll-top">
+            <i class="lni lni-arrow-up"></i>
+        </a>
+
+		<!-- ========================= JS here ========================= -->
+		<script src="static/js/bootstrap.bundle-5.0.0.alpha-min.js"></script>
+        <script src="static/js/count-up.min.js"></script>
+        <script src="static/js/wow.min.js"></script>
+        <script src="static/js/imagesloaded.min.js"></script>
+		<script src="static/js/main.js"></script>
+
+    </body>
+</html>
