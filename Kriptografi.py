@@ -53,16 +53,6 @@ class kriptografi:
         cipher = PKCS1_v1_5.new(RSA.importKey(priKey))
         mesaj = str.encode(mesaj)
         sonuc = cipher.decrypt(mesaj, sentinel)
-        #sonuc = cipher.decrypt(mesaj_byte,sentinel)
-        # chunk_size = 128
-        # offset = 0
-        # sonuc = ""
-        # print("msj",mesaj,flush=True)
-        # while offset < len(mesaj):
-        #     sonuc += cipher.decrypt(mesaj[offset:offset + chunk_size],sentinel)
-        #     offset += chunk_size
-
-
         return sonuc.decode()
 
 

@@ -50,7 +50,6 @@ class ipscan():
     def my_ip_adresses(self):
         NAT_ip = requests.get("http://wtfismyip.com/text").text.strip()
         host_name = socket.gethostname()
-        # host_ip = socket.gethostbyname(host_name+ ".local")
         rs = []
         for i in netifaces.interfaces():
             addrs = netifaces.ifaddresses(i)

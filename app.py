@@ -104,4 +104,4 @@ def rsadesifreleme():
     return render_template("desifrelemesonuc.html", isim=isim, mesaj=str(mesaj), sonuc=(sonuc), metod="RSA")
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=False)
