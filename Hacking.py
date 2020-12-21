@@ -4,7 +4,7 @@ from pythonping import ping
 
 class ipscan():
 
-    def get_host_list(self,target):
+    def get_host_list(self,target): #ip oluşturma
         fark = 3 - target.count(".")
         stg = []
         stg.append(target)
@@ -23,28 +23,16 @@ class ipscan():
 
     def get_ipscan(self,target):
         rslt=[]
-        s = ""
-        #host_list=[]
         host_list=self.get_host_list(target)
-
         for i in host_list:
             d=ping(i,timeout=0.1,count=1,size=1, verbose=False)
             if d.success():
                 rslt.append(i)
-
         print("rslt",rslt,flush=True)
         return rslt
-        # s = ""
-        # for i in range(3 - target.count(".")):
-        #     s += ".0"
-        # s = target + s + "/24"
-        # print(s)
-        # scan = networkscan.Networkscan(s)
-        # scan.run()
-        # return scan.list_of_hosts_found
+
     def pingfonk(self, target=""):
         rslt = []
-        ips = ipscan()
         if target=="":
             for i in netifaces.interfaces():
                 addrs = netifaces.ifaddresses(i)
@@ -55,7 +43,7 @@ class ipscan():
                         d=str(d[0])+"."+str(d[1])+"."+str(d[2])
                         target=d
         if target!="":
-            rslt = ips.get_ipscan(target)
+            rslt = self.get_ipscan(target)
             return rslt
         return []
 
@@ -75,7 +63,10 @@ class ipscan():
         rslt=[NAT_ip, rs, host_name, mac_address]
         return rslt
 
-
+    def domaintoip(target):
+        rslt = []
+        rslt.append(socket.gethostbyname(target))
+        return rslt
 
 class port_scan():
 

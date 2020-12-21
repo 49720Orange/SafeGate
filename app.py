@@ -44,16 +44,11 @@ def ip_scan():
     return render_template('ipscan.html',rslt=rslt)
 
 
-def dom2ip(target):
-    rslt=[]
-    rslt.append(socket.gethostbyname(target))
-    return rslt
-
-
 @app.route('/domaintoip', methods=['POST'])
 def domaintoip():
     target = str(request.form.get('domain'))
-    rslt=dom2ip(target)
+    c=Hacking.ipscan()
+    rslt=c.domaintoip(target)
     return render_template('domaintoip.html',rslt=rslt, target=target)
 
 
@@ -104,7 +99,8 @@ def rsadesifreleme():
     alici = request.form['email']
     kripto = Kriptografi.kriptografi()
     sonuc=kripto.rsaDesifreleme(mesaj, anahtar)
-    print("sonuc",sonuc)
+    ms = Kriptografi.mailSent(mail)
+    ms.mailGondermeDesifreleme(isim, alici, mesaj, sonuc, metod="RSA")
     return render_template("desifrelemesonuc.html", isim=isim, mesaj=str(mesaj), sonuc=(sonuc), metod="RSA")
 
 if __name__ == '__main__':
